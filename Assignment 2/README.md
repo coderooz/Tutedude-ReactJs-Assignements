@@ -35,3 +35,5 @@ npm run preview
 3. Build: `npm run build`
 4. Output: `dist`
 
+## Deployment
+Application deployed on vercel on this link [https://todo-app-tau-nine-89.vercel.app/](https://todo-app-tau-nine-89.vercel.app/)
