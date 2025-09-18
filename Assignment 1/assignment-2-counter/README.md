@@ -1,12 +1,70 @@
-# React + Vite
+# Counter Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple React counter app built with:
+- A **class** component `Heading`
+- A **function** component `Counter`
+- Attractive UI (cards, gradient, responsive)
+- Count cannot go below `0`
 
-Currently, two official plugins are available:
+## Screenshot:
+![App Screenshot](Vite-React.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Displays **two separate counters**:
+  - Class-based Counter
+  - Function-based Counter
+- Both counters prevent the value from going below 0
+- Clean and attractive UI
+- Responsive layout
 
-## Expanding the ESLint configuration
+## Run locally
+```bash
+npm install
+npm run dev
+# open http://localhost:5173
+````
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Build
+
+```bash
+npm run build
+# preview build locally
+npm run preview
+```
+
+## Deploy (Vercel)
+
+1. Push to GitHub.
+2. Import the repository in Vercel.
+3. Build command: `npm run build`
+4. Output directory: `dist`
+5. Deploy.
+
+Alternatively, use the Vercel CLI:
+
+```bash
+npm i -g vercel
+vercel
+```
+
+## Deployment
+
+The application can be viewed in this url: [https://counter-app-olive-six.vercel.app](https://counter-app-olive-six.vercel.app)
+
+
+## Changes Made
+
+### V 0.2 - Files
+
+New adjustment have been made by adding two counter components.
+
+ * `src/components/ClassCounter.jsx` - **Class component** that renders the new counter components.
+
+ * `src/components/FunctionCounter.jsx` - **Function Componenet** that renders the same counter component as a functon component.
+
+
+### V 0.1 - Files
+
+* `src/components/Heading.jsx` — **Class component** that renders the main heading
+* `src/components/Counter.jsx` — **Function component** that manages the counter state
+* `src/index.css` — styles

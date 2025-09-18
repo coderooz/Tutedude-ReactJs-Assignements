@@ -1,113 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-* { box-sizing: border-box; }
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg,#f6f9ff 0%,#e8f0ff 100%);
-  color: #0f172a;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #f9faff, #eef1f8);
+  color: #111827;
 }
 
 /* Page container */
-.container {
-  min-height: 100vh;
+.app {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 2rem;
   padding: 2rem;
 }
 
-/* Row containing both components */
+/* Heading card */
+.heading-card {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  text-align: center;
+}
+
+.heading-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.heading-sub {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+/* Counter layout */
 .components-row {
   display: flex;
   gap: 2rem;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  max-width: 980px;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
 }
 
-/* Card base */
-.card {
+/* Counter cards */
+.counter-card {
+  flex: 1 1 320px;
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(15,23,42,0.08);
-  padding: 1.8rem;
-  width: 360px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
   text-align: center;
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(15,23,42,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Heading styles */
-.heading-title {
-  margin: 0;
-  font-size: 1.4rem;
-  line-height: 1.2;
-  color: #0b1220;
-}
-.heading-sub {
-  margin-top: 0.6rem;
-  font-size: 0.95rem;
-  color: #475569;
+.counter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
-/* Counter styles */
-.counter-value {
-  font-size: 2.6rem;
-  font-weight: 700;
-  padding: 1rem 0.5rem;
-  color: #0b1220;
-  border-radius: 12px;
-  background: linear-gradient(90deg,#eef2ff,#fff);
-  box-shadow: inset 0 -4px 8px rgba(2,6,23,0.02);
+.counter-card h2 {
+  font-size: 1.3rem;
   margin-bottom: 1rem;
-  min-width: 120px;
+  color: #1f2937;
+}
+
+/* Counter value */
+.counter-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f3f4f6, #fff);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
 /* Buttons */
-.controls {
-  display: flex;
-  gap: 0.8rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 .btn {
-  padding: 0.7rem 1.1rem;
+  padding: 0.7rem 1.4rem;
   border-radius: 10px;
   border: none;
   cursor: pointer;
   font-weight: 600;
   font-size: 1rem;
-  transition: transform .12s ease;
+  transition: transform 0.15s ease, background 0.2s ease;
 }
-.btn:active { transform: translateY(2px); }
-.btn:disabled { cursor: not-allowed; opacity: 0.5; transform: none; }
 
-/* Button types */
-.btn.primary {
-  background: linear-gradient(90deg,#6366f1,#7c3aed);
-  color: white;
-  box-shadow: 0 6px 18px rgba(99,102,241,0.24);
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
 }
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Button colors */
+.btn.primary {
+  background: linear-gradient(90deg, #6366f1, #7c3aed);
+  color: white;
+}
+
 .btn.danger {
   background: #ef4444;
   color: white;
-  box-shadow: 0 6px 18px rgba(239,68,68,0.16);
-}
-.btn.muted {
-  background: transparent;
-  border: 1px solid #e6e9ef;
-  color: #111827;
 }
 
-/* Responsive: stack on small screens */
-@media (max-width: 700px) {
-  .components-row { flex-direction: column; }
-  .card { width: 100%; max-width: 420px; }
+.btn.muted {
+  background: #f3f4f6;
+  color: #111827;
+  border: 1px solid #e5e7eb;
 }
