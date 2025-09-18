@@ -1,8 +1,8 @@
 # Counter Application
 
 Simple React counter app built with:
-- A **class** component `Heading`
-- A **function** component `Counter`
+- A `Heading` component 
+- A **class** & **function** component as counter.
 - Attractive UI (cards, gradient, responsive)
 - Count cannot go below `0`
 
